@@ -155,7 +155,7 @@ $ ./aws_ec2_debug_ssh.sh
 <br/>
 ---
 
-<sup>1</sup> The Tokyo region was chosen to perform the trainings described [in this blogpost](http://lopespm.github.io/machine_learning/2016/10/05/deep-reinforcement-learning-racing-game.html) due to the low consistent g2.2xlarge [spot instance bid prices](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html)
+<sup>1</sup> The Tokyo region was chosen to perform the trainings described [in this blogpost](http://lopespm.github.io/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html) due to the low consistent g2.2xlarge [spot instance bid prices](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html)
 
 <sup>2</sup> Using the default agent-traing configuration, each training run can reach up to 25GB worth of replay memories, which need to be accessed randomly during the training process. Since these cannot fit into the g2.2xlarge instance's 16GB of RAM, about 600 IOPS are required to keep the training performance acceptable. GP2 volumes provide more IOPS as you increase their size, hence the allocation of a 200 GB General Purpose SSD (GP2, 600 IOPS), which turns out to be more cost effective than a smaller 30GB, 600 IOPS Provisioned SSD (IO1).
 
